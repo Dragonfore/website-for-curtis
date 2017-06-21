@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <script type="application/json">
+        Access-Control-Allow-Origin: https://paypal.com/webapp;
+    </script>
+
+    <!-- Meta data of the page-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The site for the best drinking game of the 21st Century!" />
+    <meta name="author" content="Matthew MacKay" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Page-Enter" content="revealTrans(Duration=2.0,Transition=12)">
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+
+    <!-- Title of page-->
+    <title>Curtis' Drinking Game</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Personalized stylesheet-->
+    <link rel="stylesheet" href="css/style-features.css" />
+    <link rel="stylesheet" href="css/cover.css" />
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body class="jumbotron">
+    <script>
+        jQuery('body').css('display', 'none');
+        jQuery('body').ready(function () {
+            jQuery('body').fadeIn();
+            jQuery('a').on('click', function (event) {
+                var thetarget = this.getAttribute('target')
+                if (thetarget != "_blank") {
+                    var thehref = this.getAttribute('href')
+                    event.preventDefault();
+                    jQuery('body').fadeOut(function () {
+                        window.location = thehref
+                    });
+                }
+            });
+        });
+        setTimeout(function () {
+            jQuery('body').fadeIn();
+        }, 1000);
+    </script>
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">Curtis' Drinking Game</h3>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active"><a>Features</a></li>
+                                <li><a href="Contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="inner cover">
+
+                    <h1 class="product-text">Product Name</h1>
+                    <p class="product-text">What does the product do?</pclass="product-text">
+                    <br />
+                    <p class="product-text">What message are you trying to convey to the customer?</p>
+                    <br />
+                    <p class="product-text">It only costs ... *does not include shipping*</p>
+                    <p class="product-text">Pay through PayPay</p>
+                    
+
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+
+                    <p class="product-text">Any questions, e-mail Curtistomlinbusiness@outlook.ca for further information</p>
+
+                </div>
+
+            </div>
+        </div>
+
+        
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

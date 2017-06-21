@@ -1,0 +1,14 @@
+﻿.jumbotron {
+    position: relative;
+    background: #fff url("../img/OkanaganLake.jpg") center center; /*slide.jpg =>you image*/
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    color: black;
+}
+
+.product-text {
+    text-shadow: 2px 2px 4px black;
+    color: white;
+}
